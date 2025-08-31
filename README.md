@@ -1,4 +1,4 @@
-# DocInsight RAG — Ask & Extract Insights from Your Documents
+# DokScope RAG — Ask & Extract Insights from Your Documents
 
 A local, privacy‑friendly Retrieval‑Augmented Generation (RAG) app built with **Streamlit**, **LangChain**, **ChromaDB**, and a local **Llama 3** (GGUF via `llama-cpp-python`).  
 It performs OCR on PDFs (via **Mistral OCR** API), splits and enriches text, extracts Markdown tables to structured data, indexes everything, and answers questions grounded **only** in the retrieved context.
