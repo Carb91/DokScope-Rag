@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# Data directories
+data/db/
+data/models/
+data/processed/
+data/table_data/
+data/temp/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+*$py.class
