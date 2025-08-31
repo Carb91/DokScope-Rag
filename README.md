@@ -220,9 +220,13 @@ QUESTION:
 ### Cleaning utilities
 
 - `clean_llm_response(text)`:
-  - Strip HTML/tags; drop “DOMANDA:” / “IMPORTANTE:” blocks if present; de‑duplicate paragraphs.
+
+  - Strip HTML/tags
+  - Drop "QUESTION:" / "IMPORTANT:" blocks if present
+  - De-duplicate paragraphs
+
 - `dedup_paragraphs(text)`:
-  - Remove repeated adjacent paragraphs while preserving order.
+  - Remove repeated adjacent paragraphs while preserving order
 
 ### Logging
 
