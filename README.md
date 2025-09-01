@@ -89,12 +89,13 @@ pip install -r requirements.txt
 
 ### 3) Download a local Llama 3 (GGUF)
 
-- Place a model file (e.g., `Llama-3.2-3B-Instruct.Q4_K_M.gguf`) under `./data/models/`.
+- Download the model from [TheBloke's Hugging Face repository](https://huggingface.co/TheBloke/Llama-3.2-3B-Instruct-GGUF)
+- Place the downloaded model file (e.g., `Llama-3.2-3B-Instruct.Q4_K_M.gguf`) under `./data/models/`
 - In `app.py`, set:
   ```python
   llama_model_path = "./data/models/Llama-3.2-3B-Instruct.Q4_K_M.gguf"
   ```
-- The app will raise a `FileNotFoundError` if the model is missing.
+- The app will raise a `FileNotFoundError` if the model is missing
 
 ### 4) Configure environment variables
 
@@ -240,15 +241,23 @@ QUESTION:
 
 ## 📝 License
 
+## 📝 License
+
 MIT — see `LICENSE`.
+MIT — see `LICENSE`.
+
+---
 
 ---
 
 ## 🙌 Acknowledgements
 
+## 🙌 Acknowledgements
+
 - [LangChain](https://python.langchain.com/)
-- [ChromaDB](https://www.trychroma.com/)
-- [Streamlit](https://streamlit.io/)
+- [ChromaDB](https://www.trychroma.com/)om/)
+- [Streamlit](https://streamlit.io/)om/)
 - [llama.cpp](https://github.com/ggerganov/llama.cpp) & `llama-cpp-python`
-- Hugging Face sentence transformers
+- Hugging Face sentence transformersrganov/llama.cpp) & `llama-cpp-python`
+- Mistral OCR APIntence transformers
 - Mistral OCR API
