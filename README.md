@@ -228,71 +228,13 @@ QUESTION:
 - `dedup_paragraphs(text)`:
   - Remove repeated adjacent paragraphs while preserving order
 
-### Logging
-
-- Standard Python logging with `logger = logging.getLogger(__name__)`.
-- (Optional) Streamlit sidebar shows logs via an in‑memory buffer (`io.StringIO`).
-
----
-
-## 🧹 Deleting Documents & Tables
-
-When you click **Remove Files** the app:
-
-1. Deletes the corresponding entries from the vectorstore, e.g.:
-   ```python
-   self.vectorstore._collection.delete(where={"source": doc_name})
-   ```
-2. Removes the temp PDF and OCR text from `data/temp/`.
-3. Removes **CSV tables** starting with the document prefix from `data/table_data/`.
-4. Updates Streamlit state and, if no docs remain, resets the pipeline and chat.
-
-> This ensures no orphaned tables/embeddings remain after removing a document.
-
----
-
-## 🧯 Troubleshooting
-
-- **`FileNotFoundError: LLM model not found ...`**  
-  Ensure `llama_model_path` points to an existing GGUF file under `./data/models/`.
-
-- **`NotImplementedError: This client is deprecated ...` (Mistral)**  
-  Pin `mistralai==0.4.2` _or_ migrate to the new client per the official migration guide.  
-  The repo uses the **new** client API by default.
-
-- **Streamlit asks for your email at startup**  
-  Just press **Enter** to skip.
-
-- **Widget state errors (e.g., “cannot be modified after instantiation”)**  
-  Initialize `st.session_state.select_all_sources` **before** you render the checkbox and avoid setting it in the same render after the widget is created.
-
-- **Uploaded file re‑processing loops**  
-  Keep a `processed_files` set in `st.session_state` and skip files already processed in the current session.
-
-- **Large files**  
-  Streamlit’s uploader defaults to ~200 MB. You can increase using:
-  ```bash
-  export STREAMLIT_SERVER_MAX_UPLOAD_SIZE=1024
-  ```
-  then restart Streamlit. Consider memory constraints.
-
 ---
 
 ## 🔐 Privacy & Security
 
-- All processing runs locally except OCR calls to Mistral.
-- You control which documents are indexed and which sources are used to answer.
-- `.env` is excluded from git; never commit secrets.
-
----
-
-## 🗺️ Roadmap
-
-- Multi‑file table cross‑references
-- Inline table rendering in answers
-- Better hallucination guards (answerability classifier)
-- Optional cloud vectorstore
-- Eval suite for retrieval quality
+- All processing runs locally except OCR calls to Mistral
+- You control which documents are indexed and which sources are used to answer
+- `.env` is excluded from git; never commit secrets
 
 ---
 
