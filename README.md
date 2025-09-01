@@ -89,7 +89,7 @@ pip install -r requirements.txt
 
 ### 3) Download a local Llama 3 (GGUF)
 
-- Download the model from [TheBloke's Hugging Face repository](https://huggingface.co/TheBloke/Llama-3.2-3B-Instruct-GGUF)
+- Download the model from [TheBloke's Hugging Face repository](https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF)
 - Place the downloaded model file (e.g., `Llama-3.2-3B-Instruct.Q4_K_M.gguf`) under `./data/models/`
 - In `app.py`, set:
   ```python
