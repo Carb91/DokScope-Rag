@@ -695,7 +695,7 @@ def create_streamlit_app():
         st.session_state.processed_files = set()   
     
     # Application title
-    st.title("📚 DocSkope - Ask documents. Get ansewers")
+    st.title("📚 DokSkope - Ask documents. Get ansewers")
     st.markdown("Load and chat with your PDF documents.")
     
     # Sidebar for document upload
