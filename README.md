@@ -241,23 +241,15 @@ QUESTION:
 
 ## 📝 License
 
-## 📝 License
-
-MIT — see `LICENSE`.
 MIT — see `LICENSE`.
 
 ---
-
----
-
-## 🙌 Acknowledgements
 
 ## 🙌 Acknowledgements
 
 - [LangChain](https://python.langchain.com/)
-- [ChromaDB](https://www.trychroma.com/)om/)
-- [Streamlit](https://streamlit.io/)om/)
+- [ChromaDB](https://www.trychroma.com/)
+- [Streamlit](https://streamlit.io/)
 - [llama.cpp](https://github.com/ggerganov/llama.cpp) & `llama-cpp-python`
-- Hugging Face sentence transformersrganov/llama.cpp) & `llama-cpp-python`
-- Mistral OCR APIntence transformers
+- Hugging Face sentence transformers
 - Mistral OCR API
